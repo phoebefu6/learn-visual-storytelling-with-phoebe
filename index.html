@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- social:start -->
+<meta name="description" content="Six sessions on turning correct charts into something that changes a decision. Write the sentence first, put the answer first, one idea per visual, and a bench that measures where your point lands. Free, by Phoebe Fu.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Learn with Phoebe">
+<meta property="og:title" content="Learn Visual Storytelling with Phoebe">
+<meta property="og:description" content="One requested context slide moves the point from slide 1 to slide 6, and adds 170 words. Six sessions on order, emphasis and the one sentence.">
+<meta property="og:url" content="https://phoebefu6.github.io/learn-visual-storytelling-with-phoebe/">
+<meta property="og:image" content="https://phoebefu6.github.io/learn-visual-storytelling-with-phoebe/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Learn Visual Storytelling with Phoebe">
+<meta name="twitter:description" content="Six sessions on order and emphasis, with a bench that measures where your point lands.">
+<meta name="twitter:image" content="https://phoebefu6.github.io/learn-visual-storytelling-with-phoebe/assets/og-cover.png">
+<!-- social:end -->
+<title>Learn Visual Storytelling with Phoebe</title>
+<link rel="stylesheet" href="assets/style.css?v=1">
+<style>
+
+  .stats-row { display: flex; gap: 2.4rem; margin-top: 1.5rem; flex-wrap: wrap; }
+  .stat b { display: block; font-size: 2.1rem; font-weight: 800; line-height: 1.05; font-variant-numeric: tabular-nums; }
+  .stat span { font-size: .72rem; opacity: .85; text-transform: uppercase; letter-spacing: .09em; font-weight: 600; }
+
+  .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .course-card {
+    border: 1px solid var(--hairline);
+    border-top: 4px solid var(--diff, var(--indigo));
+    border-radius: var(--radius);
+    padding: 1.2rem 1.3rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    text-decoration: none;
+    color: var(--ink);
+    background: #fff;
+    transition: box-shadow .15s ease, border-color .15s ease, transform .15s ease;
+    position: relative;
+  }
+  .course-card:hover { border-color: var(--indigo-soft); border-top-color: var(--diff, var(--indigo)); box-shadow: 0 8px 28px rgba(122,46,78,.14); transform: translateY(-3px); }
+  .course-card .cicon { font-size: 1.7rem; line-height: 1; }
+  .course-card .cnum { font-size: .72rem; font-weight: 700; color: var(--indigo); text-transform: uppercase; letter-spacing: .1em; }
+  .course-card h3 { font-size: 1.05rem; font-weight: 800; line-height: 1.3; }
+  .course-card p { font-size: .85rem; color: var(--muted); flex: 1; }
+  .course-card .meta { display: flex; gap: .4rem; flex-wrap: wrap; }
+
+  .diff-legend { display: flex; gap: 1rem; margin-top: 1.6rem; font-size: .74rem; color: var(--muted); font-weight: 600; flex-wrap: wrap; }
+  .diff-legend i { display: inline-block; width: .85rem; height: .35rem; border-radius: 999px; margin-right: .35rem; vertical-align: middle; }
+
+  .paths { margin-top: 2.6rem; }
+  .paths h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .3rem; }
+  .paths .plede { color: var(--muted); font-size: .92rem; margin-bottom: .8rem; }
+  .path { display: flex; gap: .55rem; align-items: center; padding: .75rem 0; border-bottom: .5px solid var(--hairline); flex-wrap: wrap; }
+  .path:last-child { border-bottom: none; }
+  .path b { min-width: 15.5rem; font-size: .9rem; }
+  .path .pstep { background: var(--indigo-50); color: var(--indigo); border-radius: 999px; padding: .16rem .68rem; font-weight: 700; font-size: .8rem; text-decoration: none; transition: all .12s ease; }
+  .path .pstep:hover { background: var(--indigo); color: #fff; }
+  .path .parr { color: var(--faint); font-weight: 700; }
+
+  .mm-section { margin-top: 1.6rem; }
+  .mm-section h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .2rem; }
+  .mm-section .mm-lede { color: var(--muted); font-size: .92rem; margin-bottom: .4rem; }
+  .mm-wrap { border: 1px solid var(--hairline); border-radius: var(--radius); background: linear-gradient(180deg,#fff,#FBF6F8); padding: .6rem; overflow-x: auto; }
+  .mm-svg { width: 100%; height: auto; display: block; max-width: 60rem; margin: 0 auto; min-width: 34rem; }
+  .mm-link { cursor: pointer; text-decoration: none; }
+  .mm-node rect { transition: opacity .15s ease, filter .15s ease; }
+  .mm-node text { pointer-events: none; }
+  .mm-link:hover .mm-node rect { filter: brightness(1.06); }
+  .mm-edge { transition: opacity .15s ease; }
+
+  .not-this { border: 1px solid var(--hairline); border-left: 4px solid var(--amber); border-radius: var(--radius); background: #fff; padding: 1.1rem 1.3rem; margin-top: 1.2rem; }
+  .not-this h3 { font-size: .95rem; font-weight: 800; margin-bottom: .5rem; }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn with Phoebe · Visual Thinking &amp; Storytelling</div>
+    <h1>Learn <span class="accent">Visual Storytelling</span> with Phoebe</h1>
+    <p class="sub">Here is a deck where every chart is correct, every number checks out, and the recommendation is never acted on. The finding is on slide five of five, behind 142 words of setup and nine separate claims. Then somebody asks for a bit of context at the front, and the point moves to slide six of six behind 203 words. Six sessions on the part that happens after the analysis is right: the one sentence, the order, and what to make loud.</p>
+    <div class="stats-row">
+      <div class="stat"><b data-count="6">6</b><span>sessions</span></div>
+      <div class="stat"><b data-count="142">142</b><span>words before the point</span></div>
+      <div class="stat"><b data-count="33">33</b><span>after four levers</span></div>
+      <div class="stat"><b data-count="4">4</b><span>things measured live</span></div>
+      <div class="stat"><b data-count="45">45</b><span>min per session</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>The six sessions 🎯 <span style="font-size:.85rem;font-weight:600;color:var(--muted)">· one claim, all the way through</span></h2>
+      <p class="plede">The running situation is <strong>Daybreak's Guji churn problem</strong> - a real finding, correctly analysed, badly told. The coffee-subscription company from the SQL, system-design, product-design, communication, course-design and dataviz courses. Same claim every session, so the only thing that changes is what you did with it.</p>
+    </div>
+
+    <div class="course-grid">
+      <a class="course-card" href="courses/01-the-one-sentence.html" style="--diff:#7FD8CB">
+        <span class="cicon">✍️</span>
+        <span class="cnum">Session 1 · easy</span>
+        <h3>The one sentence</h3>
+        <p>Subject, finding, size, consequence. The four tests it has to pass, why topic decks survive so well, and the four honest reasons the sentence will not come.</p>
+        <span class="meta"><span class="pill amber">▶ Start here</span></span>
+      </a>
+      <a class="course-card" href="courses/02-structure.html" style="--diff:#7FD8CB">
+        <span class="cicon">🏛️</span>
+        <span class="cnum">Session 2 · easy</span>
+        <h3>Structure</h3>
+        <p>Why the detective story fails in a business meeting. Two skeletons that work, the chronological one that does not, and where to put your own counter-argument.</p>
+        <span class="meta"><span class="pill">answer first</span></span>
+      </a>
+      <a class="course-card" href="courses/03-one-idea-per-visual.html" style="--diff:#FBBF24">
+        <span class="cicon">1️⃣</span>
+        <span class="cnum">Session 3 · medium</span>
+        <h3>One idea per visual</h3>
+        <p>The takeaway title, the titles-only test, the four homes for the second idea, and the fear of looking thin taken seriously rather than dismissed.</p>
+        <span class="meta"><span class="pill">two slides refusing to separate</span></span>
+      </a>
+      <a class="course-card" href="courses/04-emphasis.html" style="--diff:#FBBF24">
+        <span class="cicon">🔦</span>
+        <span class="cnum">Session 4 · medium</span>
+        <h3>Emphasis</h3>
+        <p>Emphasis is relative, so the only way to add it is to remove it. Five channels ranked by pull, the three-second test, and greying out your own work.</p>
+        <span class="meta"><span class="pill">turn things down</span></span>
+      </a>
+      <a class="course-card" href="courses/05-sequence-and-pacing.html" style="--diff:#F87171">
+        <span class="cicon">📏</span>
+        <span class="cnum">Session 5 · bench night</span>
+        <h3>Sequence and pacing</h3>
+        <p>The sequence bench. Where the point lands, words before it, distinct claims and labelled visuals - all read off the rendered deck, plus what one context slide costs.</p>
+        <span class="meta"><span class="pill amber">★ the bench</span></span>
+      </a>
+      <a class="course-card" href="courses/06-four-tellings.html" style="--diff:#FB923C">
+        <span class="cicon">🗣️</span>
+        <span class="cnum">Session 6 · hands-on</span>
+        <h3>Four tellings</h3>
+        <p>Spoken in two minutes, a one-page memo, a deck nobody narrates, three lines in a chat. What each drops, and why readership runs opposite to effort.</p>
+        <span class="meta"><span class="pill amber">🔒 final scorecard</span></span>
+      </a>
+    </div>
+
+    <div class="diff-legend">
+      <span><i style="background:#7FD8CB"></i>easy - everyone</span>
+      <span><i style="background:#FBBF24"></i>medium</span>
+      <span><i style="background:#FB923C"></i>hands-on</span>
+      <span><i style="background:#F87171"></i>bench night</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>Your passport 🎫</h2>
+      <p class="plede">Clear all three quiz questions in a session and it gets stamped. Six stamps means nothing you send goes out without a sentence and a measured order. Stamps live in this browser only.</p>
+    </div>
+    <div class="pp-strip"></div>
+  </section>
+
+  <section class="section">
+    <div class="not-this">
+      <h3>What this course is not, so you land in the right place 🧭</h3>
+      <table class="clean">
+        <tr><th>If your question is</th><th>Go here instead</th></tr>
+        <tr><td>Which encoding does this question need, and is the chart honest?</td><td><span class="mono">learn-dataviz-with-phoebe</span></td></tr>
+        <tr><td>How do I make the ask, listen first, or deliver bad news?</td><td><span class="mono">learn-communication-with-phoebe</span></td></tr>
+        <tr><td>How do I read a metric and question it?</td><td><span class="mono">learn-data-literacy-with-phoebe</span></td></tr>
+        <tr><td>How do I design a session people learn from?</td><td><span class="mono">learn-course-design-with-phoebe</span></td></tr>
+        <tr><td><strong>The charts are right. How do I turn them into something that changes a decision?</strong></td><td><strong>you are in the right place</strong></td></tr>
+      </table>
+      <p style="margin-top:.7rem;font-size:.86rem;color:var(--muted)"><strong>Session 6 is about the story changing shape, not the chart.</strong> How a chart survives a slide, a doc, a phone and a printer is <span class="mono">learn-dataviz-with-phoebe</span> session 6, and two courses owning one subject disagree with each other eventually.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="paths">
+      <h2>Choose your path 🗺️</h2>
+      <p class="plede">Three doors into the same conviction: the analysis being right is the easy half, and almost nobody measures the other half.</p>
+      <div class="path"><b>⏱️ I present tomorrow</b>
+        <a class="pstep" href="courses/01-the-one-sentence.html">1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/02-structure.html">2</a>
+        <span style="font-size:.82rem;color:var(--muted)">write the sentence, put it first, and cut what does not serve it</span>
+      </div>
+      <div class="path"><b>🔦 My deck is right and nobody acts on it</b>
+        <a class="pstep" href="courses/03-one-idea-per-visual.html">3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/04-emphasis.html">4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/05-sequence-and-pacing.html">5</a>
+        <span style="font-size:.82rem;color:var(--muted)">one idea each, one loud thing, then measure the order</span>
+      </div>
+      <div class="path"><b>🎯 The whole thing</b>
+        <a class="pstep" href="courses/01-the-one-sentence.html">1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/02-structure.html">2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/03-one-idea-per-visual.html">3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/04-emphasis.html">4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/05-sequence-and-pacing.html">5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/06-four-tellings.html">6</a>
+        <span style="font-size:.82rem;color:var(--muted)">from a sentence to four tellings of it</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>What is honest here 🧾</h2>
+      <p class="plede">The bench in session 5 reads its numbers back out of the rendered slides. One figure is a model, and it says so on the widget itself.</p>
+    </div>
+    <table class="clean">
+      <tr><th>Claim</th><th>Status</th></tr>
+      <tr><td>Where the point lands</td><td><strong>Really measured.</strong> The index of the slide carrying the conclusion, found in the rendered deck after it is drawn</td></tr>
+      <tr><td>Words before the point</td><td><strong>Really measured</strong> from the rendered text of every slide up to and including the point. Titles, claims and body text all counted</td></tr>
+      <tr><td>Distinct claims and labelled visuals</td><td><strong>Really counted</strong> in the DOM. If a lever silently failed to change the deck, these report the truth rather than the intention</td></tr>
+      <tr><td>Time to the point</td><td><strong>A model,</strong> labelled as one on the widget: words at 160 wpm plus 15 seconds a slide. Both constants are stated and neither is a finding</td></tr>
+      <tr><td>Daybreak's numbers</td><td>A teaching situation. The measurement code is real</td></tr>
+    </table>
+  </section>
+
+  <section class="section mm-section">
+    <h2>The knowledge map 🧠</h2>
+    <p class="mm-lede">The whole course at a glance - hover a session to spotlight its concepts, click any node to jump in.</p>
+    <div class="mm-wrap"><div id="mindmap"></div></div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>learn-visual-storytelling-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span>Source map, every constant and the bench's honest limits: <span class="mono">materials/official-course-map.md</span></span>
+  </footer>
+
+</main>
+
+<script>
+window.MINDMAP_DATA = {
+  title: "Learn\nVisual Storytelling",
+  centerColor: "#4E1B31",
+  sessions: [
+    { label: "The one\nsentence", href: "courses/01-the-one-sentence.html", color: "#7FD8CB",
+      concepts: [
+        { label: "Topic, summary, claim", href: "courses/01-the-one-sentence.html" },
+        { label: "Subject, finding, size, so", href: "courses/01-the-one-sentence.html" },
+        { label: "The corridor test", href: "courses/01-the-one-sentence.html" } ] },
+    { label: "Structure", href: "courses/02-structure.html", color: "#7FD8CB",
+      concepts: [
+        { label: "The reveal fails here", href: "courses/02-structure.html" },
+        { label: "Pyramid or turn", href: "courses/02-structure.html" },
+        { label: "Three supports, strongest first", href: "courses/02-structure.html" } ] },
+    { label: "One idea\nper visual", href: "courses/03-one-idea-per-visual.html", color: "#FBBF24",
+      concepts: [
+        { label: "The takeaway title", href: "courses/03-one-idea-per-visual.html" },
+        { label: "The titles-only test", href: "courses/03-one-idea-per-visual.html" },
+        { label: "The fear of looking thin", href: "courses/03-one-idea-per-visual.html" } ] },
+    { label: "Emphasis", href: "courses/04-emphasis.html", color: "#FBBF24",
+      concepts: [
+        { label: "Add it by removing it", href: "courses/04-emphasis.html" },
+        { label: "Five channels, ranked", href: "courses/04-emphasis.html" },
+        { label: "The three-second test", href: "courses/04-emphasis.html" } ] },
+    { label: "Sequence\nand pacing", href: "courses/05-sequence-and-pacing.html", color: "#F87171",
+      concepts: [
+        { label: "142 words down to 33", href: "courses/05-sequence-and-pacing.html" },
+        { label: "The context-slide trap", href: "courses/05-sequence-and-pacing.html" },
+        { label: "Reorder, cut, then rewrite", href: "courses/05-sequence-and-pacing.html" } ] },
+    { label: "Four\ntellings", href: "courses/06-four-tellings.html", color: "#FB923C",
+      concepts: [
+        { label: "Spoken version first", href: "courses/06-four-tellings.html" },
+        { label: "The deck without you", href: "courses/06-four-tellings.html" },
+        { label: "Three lines, most read", href: "courses/06-four-tellings.html" } ] }
+  ]
+};
+</script>
+<script src="assets/mindmap.js?v=1"></script>
+<script src="assets/app.js?v=1"></script>
+</body>
+</html>
